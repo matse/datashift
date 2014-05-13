@@ -162,7 +162,7 @@ module DataShift
         record.send(operator) << value
       else
 
-        insistent_find_by_list.each do |x|
+        Populator::insistent_find_by_list.each do |x|
           begin
             next unless method_detail.operator_class.respond_to?( "find_by_#{x}" )
             item = method_detail.operator_class.send("find_by_#{x}", value)
