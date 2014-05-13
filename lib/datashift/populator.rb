@@ -25,7 +25,7 @@ module DataShift
     # When looking up an association, when no field provided, try each of these in turn till a match
     # i.e find_by_name, find_by_title, find_by_id
     def self.insistent_find_by_list
-      @insistent_find_by_list ||= [:name, :title, :id]
+      @insistent_find_by_list ||= [:name, :title, :id, :shipping_category]
     end
 
 
